@@ -1,0 +1,59 @@
+.promotions{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.promotion-card{
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    width: 45%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px black;
+}
+
+.promotion-card img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.promotion-content{
+    flex: 1;
+}
+
+.promotion-title{
+    font-family: 'Brush Script MT';
+    font-size: 24px;
+}
+
+.promotion-discount{
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.promotion-content .order-button{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:768px){
+    .promotion-card{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promotion-card img{
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}

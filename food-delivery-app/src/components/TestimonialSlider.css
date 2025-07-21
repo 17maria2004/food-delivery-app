@@ -1,0 +1,183 @@
+.testimonial-slider {
+    background-color: white;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.testimonial-slider h2 {
+    font-family: 'Brush Script MT';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    min-width: 300px;
+    max-width: 500px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    background: #2a2a2a;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.testimonial h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.testimonial h5 {
+    font-size: 1rem;
+    color: gray;
+}
+
+.testimonial-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testimonial-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+.testimonial-image.active {
+    border: 3px solid #ffa500;
+}
+
+.slider-control {
+    margin-top: 20px;
+}
+
+.slider-control button {
+    background-color: #ffa500;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+@media screen and (max-width:768px) {
+    .testimonial-slider h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 91%;
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: darkorange;
+}
+
+#name {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    margin-top: 5px;
+}
+
+#name:focus {
+    border-color: #ffa500;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .feedback-form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}

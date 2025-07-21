@@ -1,0 +1,78 @@
+.burger-section {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    box-sizing: border-box;
+}
+
+.burger-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.burger-content img {
+    max-width: 44%;
+    height: 540px;
+    object-fit: cover;
+}
+
+.burger-text {
+    text-align: left;
+    max-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 300px;
+}
+
+.burger-text h2 {
+    font-family: 'Brush Script MT';
+    font-size: 2.5rem;
+}
+
+.burger-text p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .burger-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .burger-content img {
+        max-width: 80%;
+        max-height: 300px;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+
+    .burger-text {
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}

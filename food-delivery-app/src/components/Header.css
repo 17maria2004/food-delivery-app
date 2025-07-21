@@ -1,0 +1,48 @@
+.header{
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header-content{
+    text-align: center;
+    max-width: 100%;
+    width: 600px;
+    margin-left: 5%;
+}
+
+
+.slider-text{
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+}
+
+.slider-text h2{
+    font-family: 'Brush Script MT';
+    font-size: clamp(2.5rem, 8vw, 4.375rem);
+    margin-bottom: 1rem;
+}
+
+.slider-text p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.carousel .control-dots .dot{
+    background-color: #ffa600;
+    box-shadow: none;
+}
+
+.carousel .control-dots .dot.selected{
+    background-color: #ffa600cf;
+}
+

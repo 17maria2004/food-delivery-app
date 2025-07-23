@@ -1,10 +1,26 @@
-name: Hello World Workflow
+name: React Build Workflow
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say Hello
-        run: echo "🎉 GitHub Actions is working!"
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🏗️ Build React app
+        run: npm run build

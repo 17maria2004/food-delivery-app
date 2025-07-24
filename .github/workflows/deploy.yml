@@ -2,34 +2,29 @@ name: Deploy React Frontend to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # Trigger on push to main
+    branches: ["main"]
 
 jobs:
   deploy-react:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"  # Match your Node.js version
+          node-version: "20"
 
-      # 3. Install dependencies and build React
       - name: Install and build React app
-        working-directory: ./client  # Assuming React is in a `client` folder
+        working-directory: ./food-delivery-app
         run: |
           npm install
           npm run build
 
-      # 4. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/build  # Path to React's build output
-          # publish_branch: gh-pages  # Uncomment if using a custom branch
+          publish_dir: ./food-delivery-app/build
